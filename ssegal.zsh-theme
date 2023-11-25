@@ -8,7 +8,7 @@ if (($+functions[git_prompt_info])); then
     ZSH_THEME_GIT_PROMPT_PREFIX=' (%B%F{yellow}'
     ZSH_THEME_GIT_PROMPT_SUFFIX='%b%f)'
 else
-    autoload -Uz vcs_info
+    autoload -Uz add-zsh-hook vcs_info
     setopt prompt_subst
     zstyle ':vcs_info:*' formats " (%%B%F{yellow}%b%u%c%f%%b)"
     zstyle ':vcs_info:*' actionformats " (%%B%F{yellow}%b[%a]%u%c%f%%b)"
